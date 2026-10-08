@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Webtoon — John Park</title>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Hind:wght@400;500;600;700&display=swap">
+<style>
+  :root{
+    --bg:oklch(96% .025 72);
+    --card:oklch(98.5% .012 76);
+    --ink:oklch(19% .055 304);
+    --muted:oklch(43% .055 304);
+    --primary:oklch(24% .09 307);
+    --accent:oklch(72% .2 47);
+    --creative:oklch(67% .16 162);
+    --border:oklch(82% .04 78);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Hind","Apple SD Gothic Neo","Noto Sans KR",system-ui,sans-serif;}
+  header{position:sticky;top:0;z-index:10;background:color-mix(in oklab,var(--bg) 90%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
+  header .in{max-width:1500px;margin:0 auto;height:64px;padding:0 24px;display:flex;align-items:center;justify-content:space-between;}
+  .logo{font-family:"Bowlby One SC",sans-serif;text-transform:uppercase;font-size:18px;color:inherit;text-decoration:none;}
+  .logo span{color:var(--accent);}
+  .back{font-size:12px;font-weight:700;text-transform:uppercase;color:inherit;text-decoration:none;border:1px solid var(--ink);padding:8px 16px;transition:.2s;}
+  .back:hover{background:var(--ink);color:var(--bg);}
+  main{max-width:1500px;margin:0 auto;padding:64px 24px 96px;}
+  .kicker{font-size:12px;font-weight:700;text-transform:uppercase;color:var(--muted);margin:0 0 12px;}
+  h1{font-family:"Bowlby One SC",sans-serif;text-transform:uppercase;font-size:clamp(3rem,10vw,7rem);line-height:.9;margin:0 0 20px;}
+  .lead{max-width:520px;color:var(--muted);font-size:18px;line-height:1.55;margin:0 0 56px;padding-bottom:40px;border-bottom:1px solid var(--border);}
+  .grid{display:grid;gap:24px;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));}
+  .card{display:block;border:1px solid var(--border);background:var(--card);color:inherit;text-decoration:none;overflow:hidden;}
+  .card .img{aspect-ratio:4/5;overflow:hidden;background:oklch(90% .04 78);}
+  .card img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease-out;}
+  .card:hover img{transform:scale(1.035);}
+  .card .cap{padding:20px;background:var(--creative);color:var(--ink);}
+  .card .meta{display:flex;justify-content:space-between;font-size:10px;font-weight:700;text-transform:uppercase;margin-bottom:16px;opacity:.8;}
+  .card h2{font-family:"Bowlby One SC","Hind",sans-serif;text-transform:uppercase;font-size:24px;line-height:1.05;margin:0;font-weight:400;}
+  .card p{margin:12px 0 0;font-size:14px;line-height:1.4;opacity:.85;display:flex;justify-content:space-between;gap:12px;align-items:flex-end;}
+  .card p b{font-size:18px;transition:transform .2s;}
+  .card:hover p b{transform:translate(4px,-4px);}
+  footer{background:var(--primary);color:oklch(97% .025 75);}
+  footer .in{max-width:1500px;margin:0 auto;padding:32px 24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:12px;text-transform:uppercase;opacity:.7;}
+</style>
+</head>
+<body>
+<header><div class="in">
+  <a class="logo" href="./">John Park<span>.</span></a>
+  <a class="back" href="./#archive">← Back to archive</a>
+</div></header>
+<main>
+  <p class="kicker">Creative / 3 series</p>
+  <h1>Webtoon</h1>
+  <p class="lead">그동안 만든 웹툰 모음입니다. 보고 싶은 작품을 골라보세요.</p>
+  <div class="grid">
+    <a class="card" href="https://dec16pjh.github.io/fukuoka-trip-2026/webtoon/lip-secret-ep01.html" target="_blank" rel="noreferrer">
+      <div class="img"><img src="__l5e/assets-v1/9dce7a61-3c2a-415d-a3a5-9b31cbfedbb6/lipsecret.webp" alt="입술에 묻은 건 비밀 미리보기" loading="lazy"></div>
+      <div class="cap"><div class="meta"><span>Creative</span><span>01 / 03</span></div><h2>입술에 묻은 건 비밀</h2><p><span>웹툰 EP.01</span><b>↗</b></p></div>
+    </a>
+    <a class="card" href="https://dec16pjh.github.io/fukuoka-trip-2026/webtoon/gwanghwamun-3sec-ep1.html" target="_blank" rel="noreferrer">
+      <div class="img"><img src="__l5e/assets-v1/979042e4-2259-4c3b-9a75-4ca5d8d7b210/gwanghwamun.png" alt="광화문, 3초 미리보기" loading="lazy"></div>
+      <div class="cap"><div class="meta"><span>Creative</span><span>02 / 03</span></div><h2>광화문, 3초</h2><p><span>JP 히어로 웹툰 1화</span><b>↗</b></p></div>
+    </a>
+    <a class="card" href="https://dec16pjh.github.io/webtoon_syn/" target="_blank" rel="noreferrer">
+      <div class="img"><img src="__l5e/assets-v1/c6571971-3026-4d00-90b2-398dce5f4bd8/webtoonsyn.png" alt="귀족학교 생존기 미리보기" loading="lazy"></div>
+      <div class="cap"><div class="meta"><span>Creative</span><span>03 / 03</span></div><h2>귀족학교 생존기</h2><p><span>웹툰 1–2화 연재본</span><b>↗</b></p></div>
+    </a>
+  </div>
+</main>
+<footer><div class="in"><span>© 2026 John Park</span><span>Made with curiosity in Seoul</span></div></footer>
+</body>
+</html>
