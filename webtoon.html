@@ -71,5 +71,26 @@
   </div>
 </main>
 <footer><div class="in"><span>© 2026 John Park</span><span>Made with curiosity in Seoul</span></div></footer>
+<script>
+(function(){
+  var grid=document.querySelector('.grid'),kick=document.querySelector('.kicker');
+  fetch('https://dec16pjh.github.io/MyPage_JP/web-sync.json?v='+Math.floor(Date.now()/6e4),{cache:'no-store'})
+    .then(function(r){return r.ok?r.json():Promise.reject();})
+    .then(function(d){
+      var list=(d.items||[]).filter(function(x){return x.web&&x.group==='webtoon';});
+      var esc=function(t){return String(t==null?'':t).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});};
+      var pad=function(n){return String(n).padStart(2,'0');};
+      kick.textContent='Creative / '+list.length+' series';
+      if(!list.length){grid.innerHTML='<p class="lead" style="border:0">공개된 웹툰이 없습니다.</p>';return;}
+      grid.innerHTML=list.map(function(x,i){
+        var img=x.webImage||x.image;
+        return '<a class="card" href="'+esc(x.href)+'" target="_blank" rel="noreferrer">'+
+          '<div class="img">'+(img?'<img src="'+esc(img)+'" alt="'+esc(x.title)+' 미리보기" loading="lazy">':'')+'</div>'+
+          '<div class="cap"><div class="meta"><span>Creative</span><span>'+pad(i+1)+' / '+pad(list.length)+'</span></div>'+
+          '<h2>'+esc(x.title)+'</h2><p><span>'+esc(x.description)+'</span><b>↗</b></p></div></a>';
+      }).join('');
+    }).catch(function(){});
+})();
+</script>
 </body>
 </html>
